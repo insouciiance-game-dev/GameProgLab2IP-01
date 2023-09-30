@@ -620,11 +620,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a874fd71b180467438264283fca644f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MoveSpeed>k__BackingField: 4
+  <MoveSpeed>k__BackingField: 3
   <Orientation>k__BackingField: {fileID: 1064076156}
   <GroundDrag>k__BackingField: 2
   <JumpForce>k__BackingField: 2
-  <AirMultiplier>k__BackingField: 2
+  <AirMultiplier>k__BackingField: 1
   <JumpKey>k__BackingField: 32
   <SpeedupKey>k__BackingField: 304
   <PlayerHeight>k__BackingField: 1

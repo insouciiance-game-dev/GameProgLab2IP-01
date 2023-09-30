@@ -272,7 +272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8fe99c9cefcd24ca0a61686959f63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 1
+  <ItemLooter>k__BackingField: {fileID: 1378181701}
+  <SceneIndex>k__BackingField: 1
+  <LootThreshold>k__BackingField: 5
 --- !u!1001 &250067532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -532,7 +534,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875202e3b066fdf45ad97710125c4627, type: 3}
+  m_Script: {fileID: 11500000, guid: 50d6c50597fe7ef4f809649e5d8c3855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ySensitivity: 400
@@ -578,9 +580,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1378181696}
-  - component: {fileID: 1378181698}
   - component: {fileID: 1378181700}
   - component: {fileID: 1378181699}
+  - component: {fileID: 1378181701}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -606,30 +608,6 @@ Transform:
   - {fileID: 1064076156}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 216.266, z: 0}
---- !u!114 &1378181698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378181695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047cd9e9aa82f6d4195855351f4ca8f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  orientation: {fileID: 0}
-  groundDrag: 0
-  jumpForce: 0
-  jumpCooldown: 0
-  airMultiplier: 0
-  jumpKey: 32
-  speedupKey: 304
-  playerHeight: 0
-  ground:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &1378181699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,19 +617,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1378181695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047cd9e9aa82f6d4195855351f4ca8f6, type: 3}
+  m_Script: {fileID: 11500000, guid: a874fd71b180467438264283fca644f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  orientation: {fileID: 1064076156}
-  groundDrag: 5
-  jumpForce: 8
-  jumpCooldown: 0.25
-  airMultiplier: 0.4
-  jumpKey: 32
-  speedupKey: 304
-  playerHeight: 1
-  ground:
+  <MoveSpeed>k__BackingField: 4
+  <Orientation>k__BackingField: {fileID: 1064076156}
+  <GroundDrag>k__BackingField: 2
+  <JumpForce>k__BackingField: 2
+  <AirMultiplier>k__BackingField: 2
+  <JumpKey>k__BackingField: 32
+  <SpeedupKey>k__BackingField: 304
+  <PlayerHeight>k__BackingField: 1
+  <Ground>k__BackingField:
     serializedVersion: 2
     m_Bits: 1024
 --- !u!54 &1378181700
@@ -681,6 +658,19 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1378181701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378181695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e2dad926e2ba54085e74f763fb94cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <LootTag>k__BackingField: Loot
 --- !u!1 &1390623924
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +714,7 @@ GameObject:
   - component: {fileID: 1569404082}
   - component: {fileID: 1569404081}
   - component: {fileID: 1569404080}
+  - component: {fileID: 1569404083}
   m_Layer: 10
   m_Name: Terrain
   m_TagString: Untagged
@@ -805,6 +796,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1569404083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569404079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9efbd3483a70c74f8fc14035206505b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Prefab>k__BackingField: {fileID: 8333869302400229472, guid: 61982c2c99063e44e9e4646d763c0439, type: 3}
+  <PrefabStorage>k__BackingField: {fileID: 1390623924}
+  <ObjectCount>k__BackingField: 100
+  <MaxHeight>k__BackingField: 5
 --- !u!1 &1768730907
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +854,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1768730907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa2d00f3efc0fde4db46025b42f15833, type: 3}
+  m_Script: {fileID: 11500000, guid: aa044b476e1cd314db76d7d8ec8e9a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPosition: {fileID: 1860664875}

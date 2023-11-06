@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GroundedState : IGroundedState
+public class GroundedState : IGroundRelativeState
 {
     private readonly PlayerMovement movement;
 

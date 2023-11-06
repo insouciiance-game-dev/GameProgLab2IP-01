@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class JumpingState : IGroundedState
+public class JumpingState : IGroundRelativeState
 {
     private readonly PlayerMovement movement;
 

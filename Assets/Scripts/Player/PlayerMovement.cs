@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
 
-    private IGroundedState groundedState;
+    private IGroundRelativeState groundedState;
 
     private void Start()
     {

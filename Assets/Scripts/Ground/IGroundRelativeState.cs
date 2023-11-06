@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public interface IGroundedState
+public interface IGroundRelativeState
 {
     void Jump();
 
